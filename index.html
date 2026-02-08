@@ -98,6 +98,17 @@
   </div>
 
   <script>
+    const toggleBtn = document.getElementById("toggleBtn");
+    toggleBtn.addEventListener("click", function () {
+  if (input.type === "password") {
+    input.type = "text";
+    toggleBtn.textContent = "Hide password";
+  } else {
+    input.type = "password";
+    toggleBtn.textContent = "Show password";
+  }
+});
+
     const btn = document.getElementById("enterBtn");
     const input = document.getElementById("pw");
 
