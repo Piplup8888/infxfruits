@@ -1,50 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Fruits</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pause</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
       font-family: Georgia, serif;
       background: #fafafa;
-      text-align: center;
-      padding-top: 30vh;
+      color: #111;
     }
-    input, button {
-      padding: 10px;
+
+    /* ===== HEADER / BANNER ===== */
+    .header {
+      min-height: 55vh;
+      width: 100%;
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.45),
+          rgba(0,0,0,0.45)
+        ),
+        url("catbanner.jpg") no-repeat center center;
+      background-size: cover;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header h1 {
+      color: #fff;
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: normal;
+      margin: 0;
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .content p {
+      margin: 8px 0;
+    }
+
+    input {
+      width: 100%;
+      max-width: 260px;
+      padding: 12px;
       font-size: 16px;
       margin-top: 10px;
-      width: 220px;
     }
+
     button {
+      width: 100%;
+      max-width: 260px;
+      padding: 12px;
+      margin-top: 12px;
+      font-size: 16px;
       background: #222;
-      color: white;
+      color: #fff;
       border: none;
       cursor: pointer;
     }
-    button:hover {
+
+    button:active {
       background: #444;
     }
   </style>
 </head>
 
 <body>
-  <p>This password is easy to find. Think...</p>
-  <p>Enter the password:</p>
 
-  <input type="password" id="pw" placeholder="•••••">
-  <br>
-  <button onclick="check()">Enter</button>
+  <!-- Banner -->
+  <div class="header">
+    <h1>Hi anonymous</h1>
+  </div>
+
+  <!-- Password -->
+  <div class="content">
+    <p>This password is easy to find. Think...</p>
+    <p>Enter the password:</p>
+
+    <input type="password" id="pw" placeholder="•••••">
+    <button id="enterBtn">Enter</button>
+  </div>
 
   <script>
-    function check() {
-      const value = document.getElementById("pw").value.trim().toLowerCase();
+    const btn = document.getElementById("enterBtn");
+    const input = document.getElementById("pw");
+
+    function checkPassword() {
+      const value = input.value.trim().toLowerCase();
       if (value === "cc") {
         window.location.href = "welcome.html";
       } else {
         alert("Try again you failed 😛");
       }
     }
+
+    btn.addEventListener("click", checkPassword);
+
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        checkPassword();
+      }
+    });
   </script>
+
 </body>
 </html>
