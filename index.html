@@ -103,15 +103,16 @@
     function checkPassword() {
       const value = input.value.trim().toLowerCase();
       
-      if (value === "cc") {
+     const LETTER_PASSWORD = "cc";
+
+      if (value === LETTER_PASSWORD) {
         window.location.href = "welcome.html";
-        } 
-        
-     else if (value === "hikaru") {
+      } 
+      else if (value === "hikaru") {
         url("rickkkkk.mp4");
-       
-      } else {
-        alert("Try again you failed 😛");
+      } 
+      else {
+        alert("Not today 🙂");
       }
     }
 
