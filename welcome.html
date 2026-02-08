@@ -1,35 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome</title>
+
   <style>
     body {
+      margin: 0;
       font-family: Georgia, serif;
-      background: #ffffff;
-      text-align: center;
-      padding: 40px;
+      background: #fafafa;
+      color: #111;
+      padding: 60px 20px;
     }
-    button {
-      margin-top: 30px;
-      padding: 12px 20px;
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    p {
+      margin: 14px 0;
+      line-height: 1.6;
+    }
+
+    .btn {
+      margin-top: 40px;
+      padding: 12px 26px;
       font-size: 16px;
       background: #222;
-      color: white;
+      color: #fff;
       border: none;
       cursor: pointer;
     }
-    button:hover {
+
+    .btn:active {
       background: #444;
     }
   </style>
 </head>
 
 <body>
-  <p>Hey.</p>
-  <p>Thank you for taking a moment to be here.</p>
-  <p>This page exists quietly.</p>
 
-  <button onclick="location.href='letter.html'">Open letter</button>
+  <div class="container">
+
+    <p><strong>Hi 👋</strong><br>
+    You actually got the correct password.</p>
+
+    <p>Before you go any further, one tiny disclaimer.</p>
+
+    <p>What’s next is just a letter. Nothing dangerous. Probably.</p>
+
+    <p>Please don’t open it out of curiosity.<br>
+    Continue only if you are feeling chill and okay.</p>
+
+    <p>If not, no pressure at all you can stop right here and pretend this never happened.</p>
+
+    <p>I made this purely for timepass, honestly.<br>
+    It might make you feel emotional, annoyed, confused, or randomly laugh lol.<br>
+    Or you might just go “bruh” and leave. That’s valid too 😌</p>
+
+    <p>If you are reading this, we are both a little curious at least <br>
+   and that’s kind of funny.</p>
+
+    <p>I’ll be honest though I do miss you.<br>
+    Maybe a little.<br>
+    Or maybe more.</p>
+
+    <p>Anyway… it’s completely your choice.</p>
+
+    <button class="btn" onclick="location.href='letter.html'">
+      Open the letter
+    </button>
+
+  </div>
+
 </body>
 </html>
