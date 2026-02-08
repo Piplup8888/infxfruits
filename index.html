@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test</title>
+  <meta charset="UTF-8">
+  <title>Pause</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #fafafa;
+      text-align: center;
+      padding-top: 30vh;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      width: 220px;
+    }
+    button {
+      background: #222;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #444;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>It works 🎉</h1>
-  <p>Your GitHub Pages site is live.</p>
+  <p>This page is quiet.</p>
+  <p>Enter the word:</p>
+
+  <input type="password" id="pw" placeholder="•••••">
+  <br>
+  <button onclick="check()">Enter</button>
+
+  <script>
+    function check() {
+      const value = document.getElementById("pw").value.trim().toLowerCase();
+      if (value === "cc") {
+        window.location.href = "welcome.html";
+      } else {
+        alert("Not today 🙂");
+      }
+    }
+  </script>
 </body>
 </html>
